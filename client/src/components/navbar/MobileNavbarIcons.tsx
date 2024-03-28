@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 // Icons
 import { HiMiniBars2, HiXMark  } from "react-icons/hi2";
-import { MdOutlineDarkMode, MdLightbulbOutline  } from "react-icons/md";
+import { FaGithub } from "react-icons/fa6";
 
 export default function MobileNavbarIcons() {
 
@@ -19,6 +19,7 @@ export default function MobileNavbarIcons() {
 
         <React.Fragment>
 
+            <Button size="iconRounded" variant="outline" onClick={()=> window.location.href = "https://github.com/ekasky"}><FaGithub fontSize={24} /></Button>
             <Button size="iconRounded" variant="outline" onClick={handleMenuClick}>{ !isMenuOpen ? <HiMiniBars2 fontSize={16} /> :  <HiXMark fontSize={16} /> }</Button>
 
         </React.Fragment>
