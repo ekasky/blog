@@ -11,6 +11,11 @@ import WebsiteDevPage from "./pages/Posts/WebsiteDevPage";
 import ComputerSciencePage from "./pages/Posts/ComputerSciencePage";
 import ComputerEngineeringPage from "./pages/Posts/ComputerEngineeringPage";
 import AllFeaturedPage from "./pages/Posts/AllFeaturedPage";
+import Homepage from "./pages/Homepage";
+import Blogpage from "./pages/Blogpage";
+import Aboutpage from "./pages/Aboutpage";
+import Forumpage from "./pages/Forumpage";
+import TechNewsPage from "./pages/Posts/TechNewsPage";
 
 interface navItemsInterface {
 
@@ -26,6 +31,7 @@ interface navItemsInterface {
 
     }[],
     href?: string;
+    page?: React.ReactNode;
 
 };
 
@@ -34,12 +40,14 @@ const navItems:navItemsInterface[] = [
     {
         tab: "Home",
         dropdown: false,
+        page: <Homepage />,
         href: "/"
     },
 
     {
         tab: "Blog",
         dropdown: false,
+        page: <Blogpage />,
         href: "/blog"
     },
 
@@ -94,7 +102,7 @@ const navItems:navItemsInterface[] = [
                 name: "Tech News",
                 description: "See the latest tech news",
                 icon: <FaNewspaper />,
-                page: <ComputerEngineeringPage />,
+                page: <TechNewsPage />,
                 href: "/tech-news"
             },
 
@@ -113,13 +121,15 @@ const navItems:navItemsInterface[] = [
     {
         tab: "About us",
         dropdown: false,
+        page: <Aboutpage />,
         href: "/about-us"
     },
 
     {
-        tab: "Fourm",
+        tab: "Forum",
         dropdown: false,
-        href: "/fourm"
+        page: <Forumpage />,
+        href: "/forum"
     }
 
 ]; 
