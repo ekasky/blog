@@ -5,6 +5,8 @@ import navItems from "./navItems";
 // Pages
 import Homepage from "./pages/Homepage";
 import NotFoundPage from "./pages/NotFoundPage";
+import Loginpage from "./pages/Loginpage";
+import Registerpage from "./pages/Registerpage";
 
 // Components
 import Navbar from "@/components/navbar/Navbar";
@@ -20,6 +22,8 @@ export default function App() {
       <Routes>
 
         <Route path="/" element={<Homepage />}></Route>
+        <Route path="/login" element={<Loginpage />}></Route>
+        <Route path="/signup" element={<Registerpage />}></Route>
 
         {/* Create routes for all the navItems */}
         
